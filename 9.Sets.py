@@ -19,7 +19,6 @@ Topics Covered:
 Sets store only unique values.
 Duplicate values are removed automatically.
 """
-
 numbers = {1, 2, 3, 2, 4, 1}
 print(numbers)
 
