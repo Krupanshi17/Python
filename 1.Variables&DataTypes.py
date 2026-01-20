@@ -2,7 +2,6 @@
 In Python, you don't need to declare the type of variable explicitly."""
 
 
-
 # Variable names can include letters, numbers, and underscores
 # but cannot start with a number or contain special characters.
 
