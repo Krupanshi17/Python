@@ -22,3 +22,4 @@ cube = power(3)
 
 print(square(4))
 print(cube(4))
+
