@@ -69,3 +69,84 @@ def calculate_total_price(price, quantity):
 final_amount = calculate_total_price(250, 3)
 print("Total Amount:", final_amount)
 
+"""Default arguments allow you to specify default values for parameters in case no argument is provided during the function call.
+This makes the function more flexible and easier to use."""
+
+#Example of Default Arguments
+def greet(name,city="Ahmedabad"):
+    print(name,"lives in",city)
+greet("Alex")
+greet("Alex","Surat")
+
+"""Keyword arguments mean you pass values using parameter names, not position.
+So Python knows which value goes where, regardless of order."""
+
+#Example of Keyword Arguments
+def person(name,age):
+    print("Name:",name,"Is",age,"years old")
+person(age=30,name="Jhon")
+person(name="bob",age=30)
+
+
+"""*args allows a function to accept any number of positional arguments
+Inside the function, args becomes a tuple"""
+#Example of *args
+
+def calculate_average(*marks):
+    total=sum(marks)
+    average=total/len(marks)
+    return average
+print("Average Marks:",calculate_average(80,90,85))
+print("Average Marks:",calculate_average(70,75,80,85,90,44,60))
+
+
+"""**kwargs allows a function to accept any number of keyword arguments
+Inside the function, kwargs becomes a dictionary"""
+
+#Example of **kwargs
+def personal_info(**info):
+    for key,value in info.items():
+        print(key+":",value)
+personal_info(name="Alice",age=25,city="New York")
+personal_info(name="Bob",profession="Engineer")
+
+
+"""Lambda Functions
+Lambda functions are small anonymous functions defined using the lambda keyword.
+They can take any number of arguments but can only have one expression.
+They are often used for short, throwaway functions."""
+"""lambda arguments : expression"""
+
+#Examples of Lambda Functions
+square=lambda x:x*x
+print(square(5))
+
+calculated_price=lambda price,discount:price-(price*discount/100)
+print(calculated_price(1000,10))
+
+add=lambda a,b:a+b
+print(add(10,20))
+
+"""map(), filter(), and reduce() with Lambda Functions
+These are functional programming tools used to work with collections (lists, tuples, etc.) in a clean way.These functions are used for functional programming in Python.
+map() applies a function to all items in an iterable.
+filter() filters items in an iterable based on a condition.
+reduce() reduces an iterable to a single value using a binary function. 
+"""
+
+#Example of map() with Lambda
+numbers=[1,2,3,4,5]
+squared_numbers=list(map(lambda x:x**2,numbers))
+print(squared_numbers)
+
+#example of filter() with Lambda
+numbers=[10,15,20,25,30,35]
+odd_numbers=list(filter(lambda x:x%2!=0,numbers))
+print(odd_numbers)
+
+#Example of reduce() with Lambda
+from functools import reduce
+numbers=[1,2,3,4,5]
+add=reduce(lambda x,y:x+y,numbers)
+print(add)
+
