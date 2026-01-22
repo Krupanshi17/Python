@@ -53,5 +53,3 @@ shapes = [
 
 for shape in shapes:
     print("Area:", shape.area())
-
-
