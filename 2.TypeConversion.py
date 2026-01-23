@@ -2,9 +2,7 @@
 Type Conversion & Input/Output in Python
 """
 
-# --------------------------------------------------
 # 1. IMPLICIT TYPE CONVERSION
-# --------------------------------------------------
 # Python automatically converts data types when it is safe
 
 items_count = 4        # int
@@ -16,9 +14,7 @@ print("Total Price:", total_price)
 print("Type of total_price:", type(total_price))
 
 
-# --------------------------------------------------
 # 2. EXPLICIT TYPE CONVERSION (TYPE CASTING)
-# --------------------------------------------------
 
 # String to Integer
 order_id_str = "501"
@@ -42,9 +38,7 @@ message = "Total Quantity: " + str(quantity)
 print(message)
 
 
-# --------------------------------------------------
 # 3. BOOLEAN TYPE CONVERSION
-# --------------------------------------------------
 
 print("\nBoolean Conversions:")
 print(bool(0))        # False
@@ -53,9 +47,7 @@ print(bool(""))       # False
 print(bool("Python")) # True
 
 
-# --------------------------------------------------
 # 4. COLLECTION TYPE CONVERSIONS
-# --------------------------------------------------
 
 # List to Dictionary
 user_pairs = [
@@ -81,9 +73,7 @@ user_items = tuple(user_data.items())
 print("User Items Tuple:", user_items)
 
 
-# --------------------------------------------------
 # 5. INPUT AND OUTPUT (REAL-WORLD EXAMPLE)
-# --------------------------------------------------
 
 print("\n--- User Profile Input ---")
 
@@ -97,9 +87,7 @@ print(f"\nHello {name}!")
 print(f"You are {user_age} years old.")
 
 
-# --------------------------------------------------
 # 6. PRINT FUNCTION OPTIONS
-# --------------------------------------------------
 
 print("\nPrint Formatting Examples:")
 
