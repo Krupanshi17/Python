@@ -146,3 +146,31 @@ for t in threads:
     t.join()
 
 print("Final Count",count)
+
+
+#A Ticket Booking Example
+available_ticket=1
+def book_ticket(name):
+    global available_ticket
+    with lock:
+
+        if available_ticket>0:
+            print("Found a seat")
+            time.sleep(1)
+            available_ticket-=1
+            print(name, "booked the seat")
+        else:
+            print(name, "no seat available")
+
+t1 = threading.Thread(target=book_ticket, args=("User A",))
+t2 = threading.Thread(target=book_ticket, args=("User B",))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print("Seats left:", available_ticket)
+
+
